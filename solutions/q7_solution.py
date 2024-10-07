@@ -52,10 +52,8 @@ def vec_insurance_factor(car_df: pd.DataFrame):
     result[idx_car_eq_red] = result[idx_car_eq_red] * 2
     result[idx_car_eq_blue] = result[idx_car_eq_blue] * 1.5
 
-    mileage = car_df["mileage"].copy()
     mileage = (car_df["mileage"] - 100000) // 1000
     mileage = np.array(np.maximum(mileage, 1))
-    ret = pd.Series((result + mileage), dtype=float)
     return result + mileage
 
 
