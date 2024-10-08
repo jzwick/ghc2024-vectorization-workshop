@@ -18,9 +18,9 @@ def slow_grade(grades):
     for grade in grades:
         if grade >= 90:
             letter_grades.append("A")
-        elif 80 <= grade <= 90:
+        elif 80 <= grade < 90:
             letter_grades.append("B")
-        elif 70 <= grade <= 80:
+        elif 70 <= grade < 80:
             letter_grades.append("C")
         elif grade < 70:
             letter_grades.append("F")
